@@ -33,7 +33,7 @@ modules:
       - npm ci --offline --no-audit --no-fund
       - npm run dist -- --linux --dir
       # Install to /app
-      - cp -r dist/linux-unpacked/* /app/
+      - cp -r dist/linux*-unpacked/* /app/
       - mkdir -p /app/bin
       - ln -s /app/openanime /app/bin/openanime
       # Icons & Metadata
