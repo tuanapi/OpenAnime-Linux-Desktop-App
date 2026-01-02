@@ -46,5 +46,5 @@ modules:
       - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime.metainfo.xml /app/share/metainfo/io.github.tuanapi.OpenAnime.metainfo.xml
     sources:
       - type: git
-        url: https://github.com/tuanapi/OpenAnime.git
+        url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
         tag: v1.0.3
