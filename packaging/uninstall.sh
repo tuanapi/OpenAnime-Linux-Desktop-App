@@ -6,13 +6,12 @@
 
 APP_NAME="OpenAnime"
 ICON_NAME="openanime"
-APP_FILENAME="OpenAnime-1.0.2.AppImage"
+APP_FILENAME="OpenAnime-1.0.3.AppImage"
 
 echo "🗑️ Uninstalling $APP_NAME..."
 
 # 1. Remove AppImage
 INSTALL_DIR="$HOME/.local/bin"
-if [ -f "$INSTALL_DIR/$APP_FILENAME" ]; then
     rm -f "$INSTALL_DIR/$APP_FILENAME"
     echo "   -> Removed AppImage from $INSTALL_DIR"
 else

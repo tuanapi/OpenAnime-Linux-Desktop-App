@@ -6,6 +6,9 @@
 
 Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan** donanım hızlandırmasını Linux'a getiren, en iyi yayın performansını sağlayan "Tak ve Çalıştır" çözümüdür.
 
+### 📑 Versiyon: 1.0.3 (Optimize Sürüm)
+🚀 **4K Performans Odaklı**: WebGPU + Native Wayland + Vulkan entegrasyonu tamamlandı.
+
 ![OpenAnime Icon](icon512.png)
 
 ## 🚀 Özellikler
@@ -18,10 +21,7 @@ Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan**
 
 ### Seçenek 1: AppImage (Önerilen)
 1.  [Releases](../../releases) sayfasından `.AppImage` dosyasını indirin.
-2.  Çalıştırılabilir yapın:
-    ```bash
-    chmod +x OpenAnime-1.0.2.AppImage
-    ```
+2.  Çalıştırılabilir yapın (Örn: `OpenAnime-1.0.3.AppImage`).
 3.  Çalıştırın!
 
     **Sistem Entegrasyonu (Masaüstü Kısayolu ve İkon)**:
@@ -41,10 +41,9 @@ Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan**
 yay -S openanime-bin
 ```
 
-### Seçenek 3: Flatpak (Deneysel)
-Flathub başvurusu yayınlanana kadar yerel olarak derleyebilirsiniz:
+### Seçenek 3: Flatpak
 ```bash
-flatpak-builder --user --install --force-clean build packaging/flatpak/com.openanime.app.yml
+flatpak install flathub io.github.tuanapi.OpenAnime
 ```
 
 ## 🛠️ Kaynak Kodundan Derleme

@@ -3,12 +3,17 @@ const path = require("path");
 
 const URL = "https://openani.me";
 
-// --- GPU Configuration (WebGPU always enabled) ---
+// --- GPU & Performance Configuration ---
 // Electron 35+ with Chromium 132+ fixes the 4K color bug on NVIDIA
-app.commandLine.appendSwitch("enable-features", "Vulkan");
+app.commandLine.appendSwitch("enable-features", "Vulkan,VaapiVideoDecoder,VaapiVideoEncoder,CanvasOopRasterization,UseMultiPlaneFormatForHardwareVideo,AcceleratedVideoDecodeLinuxGL");
 app.commandLine.appendSwitch("enable-unsafe-webgpu");
 app.commandLine.appendSwitch("ignore-gpu-blocklist");
-app.commandLine.appendSwitch("ozone-platform", "x11");
+app.commandLine.appendSwitch("ozone-platform-hint", "auto"); // Native Wayland support with X11 fallback
+app.commandLine.appendSwitch("enable-gpu-rasterization");
+app.commandLine.appendSwitch("enable-zero-copy");
+app.commandLine.appendSwitch("enable-hardware-overlays");
+app.commandLine.appendSwitch("ignore-resolution-limits-for-acceleration");
+app.commandLine.appendSwitch("vaapi-ignore-driver-checks");
 
 let mainWindow = null;
 

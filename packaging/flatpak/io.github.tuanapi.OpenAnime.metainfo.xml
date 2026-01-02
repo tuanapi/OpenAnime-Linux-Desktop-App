@@ -41,6 +41,11 @@
   <url type="homepage">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.0.3" date="2026-01-02">
+      <description>
+        <p>Improved 4K playback performance with native Wayland support and hardware-accelerated video scaling.</p>
+      </description>
+    </release>
     <release version="1.0.2" date="2026-01-02" />
     <release version="1.0.1" date="2026-01-02" />
     <release version="1.0.0" date="2026-01-02" />
