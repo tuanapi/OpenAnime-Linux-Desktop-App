@@ -1,4 +1,4 @@
-app-id: io.github.tuanapi.OpenAnime
+app-id: io.github.tuanapi.OpenAnime-Linux-Desktop-App
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
@@ -41,9 +41,9 @@ modules:
       - mkdir -p /app/bin
       - ln -s /app/openanime /app/bin/openanime
       # Icons & Metadata
-      - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime.png
-      - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime.desktop /app/share/applications/io.github.tuanapi.OpenAnime.desktop
-      - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime.metainfo.xml /app/share/metainfo/io.github.tuanapi.OpenAnime.metainfo.xml
+      - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime-Linux-Desktop-App.png
+      - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop /app/share/applications/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop
+      - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime-Linux-Desktop-App.metainfo.xml /app/share/metainfo/io.github.tuanapi.OpenAnime-Linux-Desktop-App.metainfo.xml
     sources:
       - type: git
         url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.tuanapi.OpenAnime</id>
+  <id>io.github.tuanapi.OpenAnime-Linux-Desktop-App</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <name>OpenAnime</name>
@@ -11,7 +11,7 @@
       It features native WebGPU and Vulkan hardware acceleration for smooth 4K playback.
     </p>
   </description>
-  <launchable type="desktop-id">io.github.tuanapi.OpenAnime.desktop</launchable>
+  <launchable type="desktop-id">io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop</launchable>
   <screenshots>
     <screenshot type="default">
       <caption>OpenAnime Main Interface</caption>
