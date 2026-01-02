@@ -40,5 +40,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
-        tag: v1.0.3
+        tag: v1.0.4
       - generated-sources.json
