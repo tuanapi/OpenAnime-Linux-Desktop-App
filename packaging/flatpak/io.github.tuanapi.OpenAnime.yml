@@ -1,9 +1,11 @@
 app-id: io.github.tuanapi.OpenAnime
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '24.08'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node24
 command: openanime
 separate-locales: false
 finish-args:
@@ -16,22 +18,23 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --filesystem=xdg-run/pipewire-0
 build-options:
-  append-path: /usr/lib/sdk/node20/bin
+  append-path: /usr/lib/sdk/node24/bin
   env:
-    npm_config_cache: /run/build/openanime/npm-cache
+    XDG_CACHE_HOME: /run/build/openanime/flatpak-node/cache
+    npm_config_cache: /run/build/openanime/flatpak-node/npm-cache
 modules:
   - name: node-sources
     buildsystem: simple
     build-commands:
       - "true"
-    # NOTE: In a real Flathub submission, this would be replaced with
-    # a generated 'generated-sources.json' containing all npm dependencies.
+    sources:
+      - generated-sources.json
 
   - name: openanime
     buildsystem: simple
     build-commands:
-      # Build the app
-      - npm install
+      # Build the app using offline cache
+      - npm install --offline
       - npm run dist -- --linux --dir
       # Install to /app
       - cp -r dist/linux-unpacked/* /app/
@@ -43,5 +46,5 @@ modules:
       - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime.metainfo.xml /app/share/metainfo/io.github.tuanapi.OpenAnime.metainfo.xml
     sources:
       - type: git
-        url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
+        url: https://github.com/tuanapi/OpenAnime.git
         tag: v1.0.3

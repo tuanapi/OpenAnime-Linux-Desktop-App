@@ -15,37 +15,37 @@
   <screenshots>
     <screenshot type="default">
       <caption>OpenAnime Main Interface</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/main.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/main.png</image>
     </screenshot>
     <screenshot>
       <caption>Recent Releases and Popular Content</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/recent_releases.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/recent_releases.png</image>
     </screenshot>
     <screenshot>
       <caption>Search and Filter Anime</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/search.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/search.png</image>
     </screenshot>
     <screenshot>
       <caption>Discover New Series</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/discover.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/discover.png</image>
     </screenshot>
     <screenshot>
       <caption>Detailed Anime Information</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/detail.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/detail.png</image>
     </screenshot>
     <screenshot>
       <caption>High Performance Player</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player1.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/player1.png</image>
     </screenshot>
     <screenshot>
       <caption>High Performance Player - Controls Interface</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player2.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime/main/screenshots/player2.png</image>
     </screenshot>
   </screenshots>
   <developer_name>tuanapi</developer_name>
-  <url type="homepage">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
-  <url type="bugtracker">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App/issues</url>
-  <url type="vcs-browser">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
+  <url type="homepage">https://github.com/tuanapi/OpenAnime</url>
+  <url type="bugtracker">https://github.com/tuanapi/OpenAnime/issues</url>
+  <url type="vcs-browser">https://github.com/tuanapi/OpenAnime</url>
   <content_rating type="oars-1.1" />
   <releases>
     <release version="1.0.3" date="2026-01-02">
