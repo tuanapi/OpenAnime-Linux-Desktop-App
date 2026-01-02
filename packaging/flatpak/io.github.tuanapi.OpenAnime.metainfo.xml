@@ -42,7 +42,10 @@
       <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player2.png</image>
     </screenshot>
   </screenshots>
+  <developer_name>tuanapi</developer_name>
   <url type="homepage">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
+  <url type="bugtracker">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App/issues</url>
+  <url type="vcs-browser">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
   <content_rating type="oars-1.1" />
   <releases>
     <release version="1.0.3" date="2026-01-02">
