@@ -15,7 +15,19 @@
   <screenshots>
     <screenshot type="default">
       <caption>OpenAnime Main Interface</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/icon512.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/main.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Search and Categories</caption>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/search.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Detailed Anime Information</caption>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/detail.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>High Performance Player</caption>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player1.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
