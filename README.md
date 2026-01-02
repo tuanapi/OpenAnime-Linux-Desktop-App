@@ -56,6 +56,7 @@ git clone https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
 cd OpenAnime-Linux-Desktop-App
 npm install
 npm start          # Geliştirici modu
+```
 ```bash
 npm run dist       # AppImage oluştur (dist/ klasöründe)
 ```
