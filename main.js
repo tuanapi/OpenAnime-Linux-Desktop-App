@@ -43,9 +43,11 @@ function createMainWindow() {
   mainWindow.webContents.on('before-input-event', (event, input) => {
     if (input.type !== 'keyDown') return;
 
-    // ESC -> Quit Application
-    if (input.key === 'Escape') {
-      app.quit();
+    // ESC -> Exit Fullscreen (instead of quitting)
+    if (input.key === "Escape") {
+      if (mainWindow.isFullScreen()) {
+        mainWindow.setFullScreen(false);
+      }
     }
   });
 }
