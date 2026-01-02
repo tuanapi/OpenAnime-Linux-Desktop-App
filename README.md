@@ -6,7 +6,7 @@
 
 Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan** donanım hızlandırmasını Linux'a getiren, en iyi yayın performansını sağlayan "Tak ve Çalıştır" çözümüdür.
 
-### 📑 Versiyon: 1.0.3 (Optimize Sürüm)
+### 📑 Versiyon: 1.0.4 (Optimize Sürüm)
 🚀 **4K Performans Odaklı**: WebGPU + Native Wayland + Vulkan entegrasyonu tamamlandı.
 
 ![OpenAnime Icon](icon512.png)
