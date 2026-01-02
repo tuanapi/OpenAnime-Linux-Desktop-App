@@ -23,13 +23,6 @@ build-options:
     XDG_CACHE_HOME: /run/build/openanime/flatpak-node/cache
     npm_config_cache: /run/build/openanime/flatpak-node/npm-cache
 modules:
-  - name: node-sources
-    buildsystem: simple
-    build-commands:
-      - "true"
-    sources:
-      - generated-sources.json
-
   - name: openanime
     buildsystem: simple
     build-commands:
@@ -48,3 +41,4 @@ modules:
       - type: git
         url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
         tag: v1.0.3
+      - generated-sources.json
