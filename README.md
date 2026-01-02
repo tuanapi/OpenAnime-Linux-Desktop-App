@@ -57,5 +57,14 @@ Requirements: `node`, `npm`.
     ```
     Output will be in `dist/`.
 
+## ⚠️ Known Issues
+
+### WebGPU Colors on Linux
+Enabling the **WebGPU (Performance Mode)** option is experimental and heavily dependent on your system drivers. On some configurations (especially with 4K/HDR content), this mode may cause:
+*   **Inverted Colors** (Red/Blue swapped)
+*   **Washed out / Grayish colors**
+
+**Solution:** If you experience this, press `Shift + O` to reset the configuration, restart the app, and select **"Kapat (Renk Doğruluğu)"** when prompted. This forces the standard, color-accurate rendering pipeline.
+
 ## 📜 License
 MIT
