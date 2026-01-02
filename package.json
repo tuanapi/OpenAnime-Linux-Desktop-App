@@ -20,7 +20,19 @@
     },
     "directories": {
       "output": "dist"
-    }
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "icon512.png",
+      "screenshots/",
+      "package.json",
+      "!flatpak-node",
+      "!packaging",
+      "!venv",
+      "!flatpak-builder-tools"
+    ],
+    "asar": true
   },
   "devDependencies": {
     "electron": "^35.7.5",
