@@ -22,6 +22,16 @@ A high-performance, borderless anime streaming client powered by **WebGPU** and 
     ```
 3.  Run it!
 
+    **System Integration (Desktop Entry & Icon)**:
+    To add OpenAnime to your application menu:
+    1.  Download `install.sh` from the repository (or Releases).
+    2.  Place it in the same folder as the AppImage.
+    3.  Run:
+        ```bash
+        chmod +x install.sh
+        ./install.sh
+        ```
+
 ### Option 2: AUR (Arch Linux)
 OpenAnime is available on the AUR as `openanime-bin`.
 ```bash
@@ -55,7 +65,13 @@ Requirements: `node`, `npm`.
     ```bash
     npm run dist
     ```
+    ```
     Output will be in `dist/`.
+
+5.  **Install to System (Optional)**:
+    ```bash
+    ./packaging/install.sh
+    ```
 
 ## ⚠️ Known Issues
 
