@@ -20,7 +20,7 @@ Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan**
 1.  [Releases](../../releases) sayfasından `.AppImage` dosyasını indirin.
 2.  Çalıştırılabilir yapın:
     ```bash
-    chmod +x OpenAnime-1.0.0.AppImage
+    chmod +x OpenAnime-1.0.1.AppImage
     ```
 3.  Çalıştırın!
 
@@ -41,8 +41,11 @@ Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan**
 yay -S openanime-bin
 ```
 
-### Seçenek 3: Flatpak
-Yakında Flathub'da.
+### Seçenek 3: Flatpak (Deneysel)
+Flathub başvurusu yayınlanana kadar yerel olarak derleyebilirsiniz:
+```bash
+flatpak-builder --user --install --force-clean build packaging/flatpak/com.openanime.app.yml
+```
 
 ## 🛠️ Kaynak Kodundan Derleme
 

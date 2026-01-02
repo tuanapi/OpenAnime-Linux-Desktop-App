@@ -16,17 +16,18 @@ finish-args:
   - --share=network
   # Audio
   - --socket=pulseaudio
+  # Performance / GPU
+  - --filesystem=xdg-run/pipewire-0
 build-options:
   append-path: /usr/lib/sdk/node20/bin
   env:
     npm_config_cache: /run/build/openanime/npm-cache
-    npm_config_offline: 'true'
 modules:
   - name: openanime
     buildsystem: simple
     build-commands:
-      # Install dependencies and build
-      - npm install --offline
+      # Build
+      - npm install
       - npm run dist -- --linux --dir
       # Install files to /app
       - cp -r dist/linux-unpacked/* /app/
@@ -35,10 +36,8 @@ modules:
       # Install Metadata
       - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/com.openanime.app.png
       - install -D -m 644 packaging/flatpak/com.openanime.app.desktop /app/share/applications/com.openanime.app.desktop
+      - install -D -m 644 packaging/flatpak/com.openanime.app.metainfo.xml /app/share/metainfo/com.openanime.app.metainfo.xml
     sources:
       - type: git
         url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
-        tag: v1.0.0
-        commit: HEAD  # Ideally, use the full commit hash of v1.0.0 here
-      # NOTE: Flathub requires strict offline builds.
-      # You should look into 'flatpak-node-generator' to generate the node_modules sources.
+        tag: v1.0.1

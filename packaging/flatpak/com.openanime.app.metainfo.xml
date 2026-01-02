@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.openanime.app</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>OpenAnime</name>
+  <summary>High-performance anime streaming client with WebGPU support</summary>
+  <description>
+    <p>
+      OpenAnime is an unofficial desktop client for OpenAni.me, specifically optimized for Linux.
+      It features native WebGPU and Vulkan hardware acceleration for smooth 4K playback.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.openanime.app.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>OpenAnime Main Interface</caption>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/icon512.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/tuanapi/OpenAnime-Linux-Desktop-App</url>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="1.0.1" date="2026-01-02" />
+  </releases>
+</component>
