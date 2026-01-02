@@ -20,7 +20,7 @@ Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan**
 1.  [Releases](../../releases) sayfasından `.AppImage` dosyasını indirin.
 2.  Çalıştırılabilir yapın:
     ```bash
-    chmod +x OpenAnime-1.0.1.AppImage
+    chmod +x OpenAnime-1.0.2.AppImage
     ```
 3.  Çalıştırın!
 
@@ -56,8 +56,19 @@ git clone https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
 cd OpenAnime-Linux-Desktop-App
 npm install
 npm start          # Geliştirici modu
+```bash
 npm run dist       # AppImage oluştur (dist/ klasöründe)
 ```
+
+## 🖥️ Test Edilen Sistem (Doğrulandı)
+
+Bu istemci, özellikle yüksek performanslı NVIDIA sistemlerinde karşılaşılan 4K renk sorunlarını çözmek için aşağıdaki donanım üzerinde test edilmiş ve onaylanmıştır:
+
+*   **İşletim Sistemi**: EndeavourOS (Kernel 6.18.2-arch2-1)
+*   **Masaüstü Ortamı**: KDE Plasma 6.5.4 (Wayland)
+*   **İşlemci**: AMD Ryzen 7 7800X3D
+*   **Ekran Kartı**: NVIDIA GeForce RTX 5070 Ti (Sürücü: 590.48.01)
+*   **RAM**: 64 GB
 
 ## 📜 Lisans
 MIT
