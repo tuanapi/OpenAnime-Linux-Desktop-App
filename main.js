@@ -38,7 +38,7 @@ if (gpuConfig.useWebGPU) {
   app.commandLine.appendSwitch("enable-features", "Vulkan");
   app.commandLine.appendSwitch("enable-unsafe-webgpu");
   app.commandLine.appendSwitch("ignore-gpu-blocklist");
-  app.commandLine.appendSwitch("disable-features", "UseChromeOSDirectVideoDecoder");
+  app.commandLine.appendSwitch("disable-features", "VulkanVideoDecoder,VulkanVideoDecode");
 } else {
   // Compatibility Configuration: Disables hardware acceleration features 
   // to ensure standard rendering compliance and color accuracy.
