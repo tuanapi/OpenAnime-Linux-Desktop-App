@@ -1,92 +1,89 @@
-# OpenAnime
+# OpenAnime Linux İstemcisi
 
-# OpenAnime Linux Client
+**Linux kullanıcıları için eksik parça.**
 
-**The missing piece for Linux users.**
+OpenAnime, [OpenAnime](https://openani.me) için geliştirilmiş, Linux'a özel bir masaüstü istemcisidir. Android ve Windows'un kendi yerel uygulamaları varken, Linux kullanıcıları genellikle tarayıcı uyumluluğu ile mücadele eder—özellikle de çoğu Linux tarayıcısında varsayılan olarak devre dışı bırakılan **WebGPU** işlevini etkinleştirmek zordur.
 
-OpenAnime is a dedicated Linux desktop client for [OpenAnime](https://openani.me). While Android and Windows have native apps, Linux users often struggle with browser compatibility—especially enabling **WebGPU** functionality which is disabled by default on many Linux browsers.
-
-This client solves that problem. It's a "Plug & Play" solution that brings full **WebGPU & Vulkan** hardware acceleration to Linux out of the box, ensuring the best possible streaming performance.
+Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan** donanım hızlandırmasını Linux'a getiren, en iyi yayın performansını sağlayan "Tak ve Çalıştır" çözümüdür.
 
 ![OpenAnime Icon](icon512.png)
 
-## 🚀 Features
+## 🚀 Özellikler
 
-*   **Hardware Acceleration**: Built on Electron with WebGPU and Vulkan enabled for smooth 4K playback.
-*   **Color Accuracy**: Forced `sRGB` color profile to prevent video color corruption on high-res displays.
-*   **Immersive UI**: Borderless window with custom "traffic light" controls (Minimize, Maximize, Close) that **auto-hide** in fullscreen.
-*   **Plug & Play**: Single-file AppImage. No installation requirements.
-*   **Smart Controls**: Green button toggles "Real Fullscreen" immediately. Focusing logic prevents accidental double-clicks.
+*   **Donanım Hızlandırma**: WebGPU ve Vulkan ile güçlendirilmiş Electron altyapısı sayesinde akıcı 4K oynatma.
+*   **Renk Doğruluğu**: Yüksek çözünürlüklü ekranlarda video renk bozulmasını önlemek için zorlanmış `sRGB` renk profili.
+*   **Sürükleyici Arayüz**: Tam ekranda **otomatik gizlenen** özel "trafik ışığı" kontrollerine (Küçült, Büyüt, Kapat) sahip çerçevesiz pencere.
+*   **Tak ve Çalıştır**: Tek dosyalık AppImage. Kurulum gerektirmez.
+*   **Akıllı Kontroller**: Yeşil buton anında "Gerçek Tam Ekran" moduna geçirir. Odaklanma mantığı, hatalı çift tıklamaları önler.
 
-## 📥 Installation
+## 📥 Kurulum
 
-### Option 1: AppImage (Recommended)
-1.  Download the `.AppImage` from [Releases](../../releases).
-2.  Make it executable:
+### Seçenek 1: AppImage (Önerilen)
+1.  [Releases](../../releases) sayfasından `.AppImage` dosyasını indirin.
+2.  Çalıştırılabilir yapın:
     ```bash
     chmod +x OpenAnime-1.0.0.AppImage
     ```
-3.  Run it!
+3.  Çalıştırın!
 
-    **System Integration (Desktop Entry & Icon)**:
-    To add OpenAnime to your application menu:
-    1.  Download `install.sh` from the repository (or Releases).
-    2.  Place it in the same folder as the AppImage.
-    3.  Run:
+    **Sistem Entegrasyonu (Masaüstü Kısayolu ve İkon)**:
+    OpenAnime'yi uygulama menünüze eklemek için:
+    1.  Depodan (veya Releases kısmından) `install.sh` dosyasını indirin.
+    2.  AppImage ile aynı klasöre koyun.
+    3.  Çalıştırın:
         ```bash
         chmod +x install.sh
         ./install.sh
         ```
 
-### Option 2: AUR (Arch Linux)
-OpenAnime is available on the AUR as `openanime-bin`.
+### Seçenek 2: AUR (Arch Linux)
+OpenAnime, AUR üzerinde `openanime-bin` adıyla mevcuttur.
 ```bash
 yay -S openanime-bin
 ```
 
-### Option 3: Flatpak
-Coming soon to Flathub.
+### Seçenek 3: Flatpak
+Yakında Flathub'da.
 ```bash
 flatpak install com.openanime.app
 ```
 
-## 🛠️ Build from Source
+## 🛠️ Kaynak Kodundan Derleme
 
-Requirements: `node`, `npm`.
+Gereksinimler: `node`, `npm`.
 
-1.  **Clone**:
+1.  **Klonla**:
     ```bash
     git clone https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
     cd OpenAnime-Linux-Desktop-App
     ```
-2.  **Install Dependencies**:
+2.  **Bağımlılıkları Yükle**:
     ```bash
     npm install
     ```
-3.  **Run (Dev)**:
+3.  **Çalıştır (Geliştirici Modu)**:
     ```bash
     npm start
     ```
-4.  **Build (AppImage)**:
+4.  **Derle (AppImage)**:
     ```bash
     npm run dist
     ```
-    ```
-    Output will be in `dist/`.
+    Çıktı `dist/` klasöründe olacaktır.
 
-5.  **Install to System (Optional)**:
+5.  **Sisteme Kur (İsteğe Bağlı)**:
     ```bash
     ./packaging/install.sh
     ```
 
-## ⚠️ Known Issues
+## ⚠️ Bilinen Sorunlar
 
-### WebGPU Colors on Linux
-Enabling the **WebGPU (Performance Mode)** option is experimental and heavily dependent on your system drivers. On some configurations (especially with 4K/HDR content), this mode may cause:
-*   **Inverted Colors** (Red/Blue swapped)
-*   **Washed out / Grayish colors**
+### Linux'ta WebGPU Renkleri
+**WebGPU (Performans Modu)** seçeneğini etkinleştirmek deneyseldir ve büyük ölçüde sistem sürücülerinize bağlıdır. Bazı yapılandırmalarda (özellikle 4K/HDR içeriklerde) bu mod şunlara neden olabilir:
+*   **Ters Renkler** (Kırmızı/Mavi yer değiştirmiş)
+*   **Soluk / Grileşmiş renkler**
 
-**Solution:** If you experience this, press `Shift + O` to reset the configuration, restart the app, and select **"Kapat (Renk Doğruluğu)"** when prompted. This forces the standard, color-accurate rendering pipeline.
+**Çözüm:** Bunu yaşarsanız, yapılandırmayı sıfırlamak için `Shift + O` tuşlarına basın, uygulamayı yeniden başlatın ve sorulduğunda **"Kapat (Renk Doğruluğu)"** seçeneğini seçin. Bu, standart, renk doğruluğu olan işleme hattını zorlar.
 
-## 📜 License
+## 📜 Lisans
 MIT
