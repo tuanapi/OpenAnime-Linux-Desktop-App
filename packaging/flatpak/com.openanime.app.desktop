@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OpenAnime
+Comment=Stream Anime (WebGPU)
+Exec=openanime
+Icon=com.openanime.app
+Terminal=false
+Categories=AudioVideo;Video;Player;
+StartupWMClass=OpenAnime

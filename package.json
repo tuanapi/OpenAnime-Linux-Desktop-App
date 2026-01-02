@@ -1,0 +1,29 @@
+{
+  "name": "OpenAnime",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "A high-performance, borderless anime streaming client powered by WebGPU and Vulkan.",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.openanime.app",
+    "productName": "OpenAnime",
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Video",
+      "icon": "icon512.png"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.0.12"
+  }
+}

@@ -1,0 +1,37 @@
+# Maintainer: tuanapi <tuana@openani.me>
+_pkgname=openanime
+pkgname="${_pkgname}-bin"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Stream Anime (WebGPU Enabled)"
+arch=('x86_64')
+url="https://github.com/tuanapi/OpenAnime-Linux-Desktop-App"
+license=('MIT')
+depends=('fuse2' 'gtk3' 'nss')
+provides=("${_pkgname}")
+conflicts=("${_pkgname}")
+options=('!strip')
+# UPDATE THIS URL: Where you host your AppImage (e.g., GitHub Releases)
+_appimage="OpenAnime-${pkgver}.AppImage"
+source=("${_appimage}::https://github.com/tuanapi/OpenAnime-Linux-Desktop-App/releases/download/v${pkgver}/${_appimage}"
+        "openanime.desktop"
+        "icon512.png")
+# GENERATE NEW CHECKSUMS WITH 'updpkgsums'
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP')
+
+package() {
+    # 1. Install AppImage to /opt
+    install -Dm755 "${srcdir}/${_appimage}" "${pkgdir}/opt/${_pkgname}/${_pkgname}.AppImage"
+
+    # 2. Link binary to /usr/bin
+    mkdir -p "${pkgdir}/usr/bin"
+    ln -s "/opt/${_pkgname}/${_pkgname}.AppImage" "${pkgdir}/usr/bin/${_pkgname}"
+
+    # 3. Install Desktop File
+    install -Dm644 "${srcdir}/openanime.desktop" "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
+
+    # 4. Install Icon
+    install -Dm644 "${srcdir}/icon512.png" "${pkgdir}/usr/share/icons/hicolor/512x512/apps/${_pkgname}.png"
+}

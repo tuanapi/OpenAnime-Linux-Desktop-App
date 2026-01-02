@@ -1,0 +1,68 @@
+const { app, BrowserWindow, ipcMain } = require("electron");
+const path = require("path");
+
+const URL = "https://openani.me";
+
+app.commandLine.appendSwitch("ozone-platform", "x11");
+app.commandLine.appendSwitch("enable-features", "Vulkan");
+app.commandLine.appendSwitch("enable-unsafe-webgpu");
+app.commandLine.appendSwitch("disable-accelerated-video-decode"); // Fix color corruption by decoding on CPU
+app.commandLine.appendSwitch("force-color-profile", "srgb");
+
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 1280,
+    height: 800,
+    icon: path.join(__dirname, "icon512.png"),
+    frame: false,              // No top bar
+    autoHideMenuBar: true,     // Hide menu
+    resizable: true,           // Resizable needed for Maximize
+    webPreferences: {
+      contextIsolation: false, // contextIsolation: false is easier for simple preloads sharing DOM, but strict is better.
+      // However, with our simple preload operating on DOM directly, false is easiest for now.
+      // Or we keep true and just use preload. contextIsolation: true works fine with preload.
+      contextIsolation: true,
+      preload: path.join(__dirname, "preload.js"),
+      sandbox: false,          // Disabling sandbox is often required for preload to have full IPC access in some configs, 
+      // though contextBridge usually handles it. Let's keep sandbox: false to be safe for this specific "hack".
+      partition: "persist:openanime"
+    }
+  });
+
+  // Lock navigation
+  win.webContents.on("will-navigate", (e, url) => {
+    if (!url.startsWith(URL)) e.preventDefault();
+  });
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (!url.startsWith(URL)) return { action: "deny" };
+    return { action: "allow" };
+  });
+
+  win.loadURL(URL);
+
+  // --- Window Control Logic ---
+  ipcMain.on('window-control', (event, action) => {
+    const webContents = event.sender;
+    const win = BrowserWindow.fromWebContents(webContents);
+    if (!win) return;
+
+    switch (action) {
+      case 'minimize': win.minimize(); break;
+      case 'maximize': win.setFullScreen(!win.isFullScreen()); break; // Toggle Fullscreen
+      case 'close': win.close(); break;
+    }
+  });
+
+  // --- Fullscreen Logic ---
+  win.on('enter-full-screen', () => {
+    win.webContents.send('set-fullscreen', true);
+  });
+  win.on('leave-full-screen', () => {
+    win.webContents.send('set-fullscreen', false);
+  });
+}
+
+app.whenReady().then(createWindow);
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") app.quit();
+});

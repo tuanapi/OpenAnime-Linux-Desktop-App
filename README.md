@@ -1,0 +1,61 @@
+# OpenAnime
+
+A high-performance, borderless anime streaming client powered by **WebGPU** and **Vulkan**. Desinged for Linux.
+
+![OpenAnime Icon](icon512.png)
+
+## 🚀 Features
+
+*   **Hardware Acceleration**: Built on Electron with WebGPU and Vulkan enabled for smooth 4K playback.
+*   **Color Accuracy**: Forced `sRGB` color profile to prevent video color corruption on high-res displays.
+*   **Immersive UI**: Borderless window with custom "traffic light" controls (Minimize, Maximize, Close) that **auto-hide** in fullscreen.
+*   **Plug & Play**: Single-file AppImage. No installation requirements.
+*   **Smart Controls**: Green button toggles "Real Fullscreen" immediately. Focusing logic prevents accidental double-clicks.
+
+## 📥 Installation
+
+### Option 1: AppImage (Recommended)
+1.  Download the `.AppImage` from [Releases](../../releases).
+2.  Make it executable:
+    ```bash
+    chmod +x OpenAnime-1.0.0.AppImage
+    ```
+3.  Run it!
+
+### Option 2: AUR (Arch Linux)
+OpenAnime is available on the AUR as `openanime-bin`.
+```bash
+yay -S openanime-bin
+```
+
+### Option 3: Flatpak
+Coming soon to Flathub.
+```bash
+flatpak install com.openanime.app
+```
+
+## 🛠️ Build from Source
+
+Requirements: `node`, `npm`.
+
+1.  **Clone**:
+    ```bash
+    git clone https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
+    cd OpenAnime-Linux-Desktop-App
+    ```
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run (Dev)**:
+    ```bash
+    npm start
+    ```
+4.  **Build (AppImage)**:
+    ```bash
+    npm run dist
+    ```
+    Output will be in `dist/`.
+
+## 📜 License
+MIT
