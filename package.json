@@ -2,7 +2,7 @@
   "name": "OpenAnime",
   "version": "1.0.0",
   "main": "main.js",
-  "description": "A high-performance, borderless anime streaming client powered by WebGPU and Vulkan.",
+  "description": "Dedicated Linux client for OpenAni.me enabling native WebGPU support.",
   "license": "MIT",
   "scripts": {
     "start": "electron .",

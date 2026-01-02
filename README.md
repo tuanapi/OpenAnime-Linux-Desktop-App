@@ -1,6 +1,12 @@
 # OpenAnime
 
-A high-performance, borderless anime streaming client powered by **WebGPU** and **Vulkan**. Desinged for Linux.
+# OpenAnime Linux Client
+
+**The missing piece for Linux users.**
+
+OpenAnime is a dedicated Linux desktop client for [OpenAni.me](https://openani.me). While Android and Windows have native apps, Linux users often struggle with browser compatibility—especially enabling **WebGPU** functionality which is disabled by default on many Linux browsers.
+
+This client solves that problem. It's a "Plug & Play" solution that brings full **WebGPU & Vulkan** hardware acceleration to Linux out of the box, ensuring the best possible streaming performance.
 
 ![OpenAnime Icon](icon512.png)
 
