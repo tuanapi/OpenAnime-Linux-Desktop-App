@@ -2,7 +2,7 @@
   "name": "OpenAnime",
   "version": "1.0.0",
   "main": "main.js",
-  "description": "OpenAni.me için geliştirilmiş, yerel WebGPU destekli Linux istemcisi.",
+  "description": "OpenAnime için geliştirilmiş, yerel WebGPU destekli Linux istemcisi.",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
