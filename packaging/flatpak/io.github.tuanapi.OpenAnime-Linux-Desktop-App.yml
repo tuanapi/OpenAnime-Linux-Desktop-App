@@ -22,12 +22,15 @@ build-options:
   env:
     XDG_CACHE_HOME: /run/build/openanime/flatpak-node/cache
     npm_config_cache: /run/build/openanime/flatpak-node/npm-cache
+    npm_config_offline: "true"
+    npm_config_audit: "false"
+    npm_config_fund: "false"
 modules:
   - name: openanime
     buildsystem: simple
     build-commands:
       # Build the app using offline cache
-      - npm install --offline
+      - npm ci --offline --no-audit --no-fund
       - npm run dist -- --linux --dir
       # Install to /app
       - cp -r dist/linux-unpacked/* /app/
