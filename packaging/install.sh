@@ -12,33 +12,38 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "📦 Installing $APP_NAME..."
 
 # 1. Verify files exist
-if [ ! -f "$SCRIPT_DIR/$APP_FILENAME" ]; then
-    echo "❌ Error: Could not find '$APP_FILENAME' in the current directory."
+APP_PATH=""
+if [ -f "$SCRIPT_DIR/../../dist/$APP_FILENAME" ]; then
+    APP_PATH="$SCRIPT_DIR/../../dist/$APP_FILENAME"
+elif [ -f "$SCRIPT_DIR/../dist/$APP_FILENAME" ]; then
+    APP_PATH="$SCRIPT_DIR/../dist/$APP_FILENAME"
+elif [ -f "$SCRIPT_DIR/$APP_FILENAME" ]; then
+    APP_PATH="$SCRIPT_DIR/$APP_FILENAME"
+fi
+
+if [ -z "$APP_PATH" ]; then
+    echo "❌ Error: Could not find '$APP_FILENAME'."
+    echo "   Checked: ../dist/, ../../dist/, and ./ "
     exit 1
 fi
-# Check for icon (optional but recommended)
-if [ ! -f "$SCRIPT_DIR/linux-unpacked/resources/app/icon512.png" ] && [ ! -f "$SCRIPT_DIR/icon512.png" ]; then
-   # Try to find icon in typical build locations or current dir
-   if [ -f "$SCRIPT_DIR/../icon512.png" ]; then
-        ICON_PATH="$SCRIPT_DIR/../icon512.png"
-   elif [ -f "$SCRIPT_DIR/icon512.png" ]; then
-        ICON_PATH="$SCRIPT_DIR/icon512.png"
-   else
-        echo "⚠️ Warning: Icon file not found. Desktop entry might miss the icon."
-   fi
-else
-   # If we are in dist/ and icon is in root or we dragged it here
-   if [ -f "$SCRIPT_DIR/icon512.png" ]; then
-       ICON_PATH="$SCRIPT_DIR/icon512.png"
-   elif [ -f "$SCRIPT_DIR/../icon512.png" ]; then
-       ICON_PATH="$SCRIPT_DIR/../icon512.png"
-   fi
+
+ICON_PATH=""
+if [ -f "$SCRIPT_DIR/../../icon512.png" ]; then
+    ICON_PATH="$SCRIPT_DIR/../../icon512.png"
+elif [ -f "$SCRIPT_DIR/../icon512.png" ]; then
+    ICON_PATH="$SCRIPT_DIR/../icon512.png"
+elif [ -f "$SCRIPT_DIR/icon512.png" ]; then
+    ICON_PATH="$SCRIPT_DIR/icon512.png"
+fi
+
+if [ -z "$ICON_PATH" ]; then
+    echo "⚠️ Warning: Icon file not found. Desktop entry might miss the icon."
 fi
 
 # 2. Move AppImage to a permanent location
 INSTALL_DIR="$HOME/.local/bin"
 mkdir -p "$INSTALL_DIR"
-cp "$SCRIPT_DIR/$APP_FILENAME" "$INSTALL_DIR/$APP_FILENAME"
+cp "$APP_PATH" "$INSTALL_DIR/$APP_FILENAME"
 chmod +x "$INSTALL_DIR/$APP_FILENAME"
 echo "   -> Copied AppImage to $INSTALL_DIR"
 
