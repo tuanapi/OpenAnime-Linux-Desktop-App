@@ -1,6 +1,6 @@
 {
   "name": "OpenAnime",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "main.js",
   "description": "OpenAnime için geliştirilmiş, resmi olmayan (unofficial), yerel WebGPU destekli Linux istemcisi.",
   "license": "MIT",

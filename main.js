@@ -49,6 +49,12 @@ function createMainWindow() {
         mainWindow.setFullScreen(false);
       }
     }
+
+    // F11 -> Toggle Fullscreen
+    if (input.key === "F11") {
+      event.preventDefault();
+      mainWindow.setFullScreen(!mainWindow.isFullScreen());
+    }
   });
 }
 
