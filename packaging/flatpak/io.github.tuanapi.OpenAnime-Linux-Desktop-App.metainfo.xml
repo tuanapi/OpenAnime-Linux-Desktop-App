@@ -59,8 +59,20 @@
         <p>Improved 4K playback performance with native Wayland support and hardware-accelerated video scaling.</p>
       </description>
     </release>
-    <release version="1.0.2" date="2026-01-02" />
-    <release version="1.0.1" date="2026-01-02" />
-    <release version="1.0.0" date="2026-01-02" />
+    <release version="1.0.2" date="2026-01-02">
+       <description>
+         <p>Critical interface and shortcut fixes. F11 key now correctly toggles fullscreen mode.</p>
+       </description>
+    </release>
+    <release version="1.0.1" date="2026-01-02">
+      <description>
+        <p>User experience improvements. Escape key now exits fullscreen instead of quitting the application.</p>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-01-02">
+      <description>
+        <p>Initial stable release features smooth 4K playback with WebGPU + Vulkan hardware acceleration and a frameless modern UI.</p>
+      </description>
+    </release>
   </releases>
 </component>
