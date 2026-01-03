@@ -1,10 +1,8 @@
 # OpenAnime Linux İstemcisi
 
-**Linux kullanıcıları için eksik parça.**
+**OpenAnime** is an unofficial desktop client for [OpenAni.me](https://openani.me), specifically optimized for Linux.
 
-[OpenAnime](https://openani.me) için geliştirilmiş, **resmi olmayan (unofficial)**, Linux'a özel bir masaüstü istemcisidir. Android ve Windows'un kendi yerel uygulamaları varken, Linux kullanıcıları genellikle tarayıcı uyumluluğu ile mücadele eder—özellikle de çoğu Linux tarayıcısında varsayılan olarak devre dışı bırakılan **WebGPU** işlevini etkinleştirmek zordur.
-
-Bu istemci bu sorunu çözer. Kutudan çıktığı gibi tam **WebGPU ve Vulkan** donanım hızlandırmasını Linux'a getiren, en iyi yayın performansını sağlayan "Tak ve Çalıştır" çözümüdür.
+It features hardware acceleration for smooth 4K playback.
 
 ### 📑 Versiyon: 1.0.4 (Optimize Sürüm)
 🚀 **4K Performans Odaklı**: WebGPU + Native Wayland + Vulkan entegrasyonu tamamlandı.

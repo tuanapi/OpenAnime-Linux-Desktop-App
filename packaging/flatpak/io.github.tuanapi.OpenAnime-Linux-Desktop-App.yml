@@ -37,7 +37,7 @@ modules:
       - mkdir -p /app/bin
       # Use a shell wrapper for arguments
       - echo "#!/bin/sh" > /app/bin/openanime
-      - echo 'exec /app/openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations "$@"' >> /app/bin/openanime
+      - echo 'exec /app/openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations,Vulkan,WebGPU --enable-unsafe-webgpu --enable-gpu-rasterization --ignore-gpu-blocklist "$@"' >> /app/bin/openanime
       - chmod +x /app/bin/openanime
       # Icons & Metadata
       - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime-Linux-Desktop-App.png
