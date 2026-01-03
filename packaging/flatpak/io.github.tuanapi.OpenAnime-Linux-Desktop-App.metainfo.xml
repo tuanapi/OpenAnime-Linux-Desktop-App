@@ -4,12 +4,17 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <name>OpenAnime</name>
-  <summary>Unofficial Linux desktop client for OpenAni.me</summary>
+  <summary>Unofficial Linux desktop client for OpenAnime</summary>
   <description>
     <p>
-      OpenAnime is an unofficial desktop client for OpenAni.me, specifically optimized for Linux. It features hardware acceleration for smooth 4K playback.
+      OpenAnime is an unofficial desktop client for OpenAnime, specifically optimized for Linux. It features hardware acceleration for smooth 4K playback.
     </p>
     <p>Key Features:</p>
+    <ul>
+      <li><strong>Hardware Acceleration:</strong> Smooth 4K playback powered by WebGPU and Vulkan compatibility.</li>
+      <li><strong>Frameless UI:</strong> Custom window controls that auto-hide for an immersive viewing experience.</li>
+      <li><strong>Linux Optimized:</strong> specifically tuned for minimal resource usage and maximum performance on Linux desktops.</li>
+    </ul>
   </description>
   <launchable type="desktop-id">io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop</launchable>
   <screenshots>
