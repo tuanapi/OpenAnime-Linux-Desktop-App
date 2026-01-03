@@ -11,40 +11,40 @@
     </p>
     <p>Key Features:</p>
     <ul>
-      <li><strong>Hardware Acceleration:</strong> Smooth 4K playback powered by WebGPU and Vulkan compatibility.</li>
-      <li><strong>Frameless UI:</strong> Custom window controls that auto-hide for an immersive viewing experience.</li>
-      <li><strong>Linux Optimized:</strong> specifically tuned for minimal resource usage and maximum performance on Linux desktops.</li>
+      <li><em>Hardware Acceleration:</em> Smooth 4K playback powered by WebGPU and Vulkan compatibility.</li>
+      <li><em>Frameless UI:</em> Custom window controls that auto-hide for an immersive viewing experience.</li>
+      <li><em>Linux Optimized:</em> specifically tuned for minimal resource usage and maximum performance on Linux desktops.</li>
     </ul>
   </description>
   <launchable type="desktop-id">io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop</launchable>
   <screenshots>
     <screenshot type="default">
       <caption>OpenAnime Main Interface</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/main.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/main.png</image>
     </screenshot>
     <screenshot>
       <caption>Recent Releases and Popular Content</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/recent_releases.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/recent_releases.png</image>
     </screenshot>
     <screenshot>
       <caption>Search and Filter Anime</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/search.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/search.png</image>
     </screenshot>
     <screenshot>
       <caption>Discover New Series</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/discover.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/discover.png</image>
     </screenshot>
     <screenshot>
       <caption>Detailed Anime Information</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/detail.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/detail.png</image>
     </screenshot>
     <screenshot>
       <caption>High Performance Player</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player1.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/player1.png</image>
     </screenshot>
     <screenshot>
       <caption>High Performance Player - Controls Interface</caption>
-      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/main/screenshots/player2.png</image>
+      <image>https://raw.githubusercontent.com/tuanapi/OpenAnime-Linux-Desktop-App/v1.0.4/screenshots/player2.png</image>
     </screenshot>
   </screenshots>
   <developer_name>tuanapi</developer_name>
