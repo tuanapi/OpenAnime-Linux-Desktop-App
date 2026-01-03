@@ -33,16 +33,16 @@ modules:
       - npm run dist -- --linux --dir
       # Install to /app
       - cp -r dist/linux*-unpacked/* /app/
-      - mkdir -p /app/bin
-      # Use a shell wrapper for arguments
-      - echo "#!/bin/sh" > /app/bin/openanime
-      - echo 'exec /app/openanime --no-sandbox --ozone-platform=x11 --enable-features=Vulkan,WebGPU --enable-unsafe-webgpu --enable-gpu-rasterization --ignore-gpu-blocklist "$@"' >> /app/bin/openanime
-      - chmod +x /app/bin/openanime
+      - install -D -m 755 openanime-wrapper /app/bin/openanime
       # Icons & Metadata
       - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime-Linux-Desktop-App.png
       - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop /app/share/applications/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop
       - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime-Linux-Desktop-App.metainfo.xml /app/share/metainfo/io.github.tuanapi.OpenAnime-Linux-Desktop-App.metainfo.xml
     sources:
+      - type: script
+        dest-filename: openanime-wrapper
+        commands:
+          - exec /app/openanime --no-sandbox --ozone-platform=x11 --enable-features=Vulkan,WebGPU --enable-unsafe-webgpu --enable-gpu-rasterization --ignore-gpu-blocklist "$@"
       - type: git
         url: https://github.com/tuanapi/OpenAnime-Linux-Desktop-App.git
         tag: v1.0.4
