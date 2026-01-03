@@ -6,7 +6,7 @@ base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node24
-command: openanime
+command: openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations
 separate-locales: false
 finish-args:
   - --share=ipc
