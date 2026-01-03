@@ -6,7 +6,7 @@ base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node24
-command: openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations
+command: openanime
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -35,7 +35,10 @@ modules:
       # Install to /app
       - cp -r dist/linux*-unpacked/* /app/
       - mkdir -p /app/bin
-      - ln -s /app/openanime /app/bin/openanime
+      # Use a shell wrapper for arguments
+      - echo "#!/bin/sh" > /app/bin/openanime
+      - echo 'exec /app/openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations "$@"' >> /app/bin/openanime
+      - chmod +x /app/bin/openanime
       # Icons & Metadata
       - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime-Linux-Desktop-App.png
       - install -D -m 644 packaging/flatpak/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop /app/share/applications/io.github.tuanapi.OpenAnime-Linux-Desktop-App.desktop
