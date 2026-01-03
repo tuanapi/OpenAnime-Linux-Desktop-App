@@ -10,12 +10,13 @@ command: openanime
 separate-locales: false
 finish-args:
   - --share=ipc
-  - --socket=fallback-x11
+  - --socket=x11
   - --socket=wayland
-  - --device=dri
+  - --device=all
   - --share=network
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
+  - --filesystem=host
   - --filesystem=xdg-run/pipewire-0
 build-options:
   append-path: /usr/lib/sdk/node24/bin
@@ -37,7 +38,7 @@ modules:
       - mkdir -p /app/bin
       # Use a shell wrapper for arguments
       - echo "#!/bin/sh" > /app/bin/openanime
-      - echo 'exec /app/openanime --no-sandbox --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations,Vulkan,WebGPU --enable-unsafe-webgpu --enable-gpu-rasterization --ignore-gpu-blocklist "$@"' >> /app/bin/openanime
+      - echo 'exec /app/openanime --no-sandbox --ozone-platform=x11 --enable-features=Vulkan,WebGPU --enable-unsafe-webgpu --enable-gpu-rasterization --ignore-gpu-blocklist "$@"' >> /app/bin/openanime
       - chmod +x /app/bin/openanime
       # Icons & Metadata
       - install -D -m 644 icon512.png /app/share/icons/hicolor/512x512/apps/io.github.tuanapi.OpenAnime-Linux-Desktop-App.png
