@@ -11,12 +11,10 @@ separate-locales: false
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --socket=wayland
-  - --device=all
+  - --device=dri
   - --share=network
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
-  - --filesystem=host
   - --filesystem=xdg-run/pipewire-0
 build-options:
   append-path: /usr/lib/sdk/node24/bin
